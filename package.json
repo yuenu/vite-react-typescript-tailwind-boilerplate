@@ -10,6 +10,15 @@
     "preview": "vite preview",
     "prepare": "husky install"
   },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix"
+    ],
+    "*.{html,scss,css}": [
+      "prettier --write",
+      "stylelint --fix"
+    ]
+  },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
